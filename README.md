@@ -30,9 +30,7 @@
     -   [Exercice 9 --- Vérification et
         livrables](#exercice-9--vérification-et-livrables)
 
-> **Important pour les captures :** les images doivent être enregistrées
-> dans le dossier `captures/`, situé au même niveau que ce fichier
-> `README.md`. Les chemins ci-dessous sont relatifs au dépôt GitHub.
+
 
 ------------------------------------------------------------------------
 
