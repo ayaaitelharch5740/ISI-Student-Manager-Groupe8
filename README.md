@@ -1,944 +1,665 @@
-# \# TP 3 : Gestion collaborative des versions avec Git et GitHub
+# TP 3 --- Gestion collaborative des versions avec Git et GitHub
 
-# 
+**Université Cadi Ayyad -- Faculté des Sciences Semlalia**\
+**Département :** Informatique\
+**Module :** Méthodologies de développement et Ateliers en PHP\
+**Niveau :** Master ISI -- S1\
+**Professeur :** Prof. Ikidid Abdelouafi
 
-# \*\*Université Cadi Ayyad – Faculté des Sciences Semlalia\*\*
+------------------------------------------------------------------------
 
-# \*\*Département : Informatique\*\*
+## Sommaire
 
-# \*\*Module : Méthodologies de développement et Ateliers en PHP\*\*
+1.  [Présentation du TP](#1-présentation-du-tp)
+2.  [Partie A --- Réalisation du TP](#partie-a--réalisation-du-tp)
+    -   [Exercice 1 --- Installation et configuration de
+        Git](#exercice-1--installation-et-configuration-de-git)
+    -   [Exercice 2 --- Création du dépôt commun sur
+        GitHub](#exercice-2--création-du-dépôt-commun-sur-github)
+    -   [Exercice 3 --- Clonage et premier
+        commit](#exercice-3--clonage-et-premier-commit)
+    -   [Exercice 4 --- Commit initial](#exercice-4--commit-initial)
+    -   [Exercice 5 --- Création des branches
+        individuelles](#exercice-5--création-des-branches-individuelles)
+    -   [Exercice 6 --- Développement en
+        parallèle](#exercice-6--développement-en-parallèle)
+    -   [Exercice 7 --- Pull Requests et revue de
+        code](#exercice-7--pull-requests-et-revue-de-code)
+    -   [Exercice 8 --- Conflit de fusion
+        contrôlé](#exercice-8--conflit-de-fusion-contrôlé)
+    -   [Exercice 9 --- Vérification et
+        livrables](#exercice-9--vérification-et-livrables)
 
-# \*\*Niveau : Master ISI – S1\*\*
+> **Important pour les captures :** les images doivent être enregistrées
+> dans le dossier `captures/`, situé au même niveau que ce fichier
+> `README.md`. Les chemins ci-dessous sont relatifs au dépôt GitHub.
 
-# \*\*Professeur : Prof. Ikidid Abdelouafi\*\*
+------------------------------------------------------------------------
 
-# 
+## 1. Présentation du TP
 
-# \---
+### Objectif
 
-# 
+L'objectif de ce TP est d'apprendre à gérer un projet informatique en
+équipe en utilisant Git et GitHub.
 
-# \## 1. Présentation du TP
+Ce travail permet de :
 
-# 
+-   Installer et configurer Git.
 
-# \### Objectif
+-   Créer et gérer un dépôt GitHub.
 
-# 
+-   Utiliser l'authentification SSH.
 
-# L'objectif de ce TP est d'apprendre à gérer un projet informatique en équipe en utilisant Git et GitHub.
+-   Cloner un dépôt distant.
 
-# 
+-   Créer des branches individuelles.
 
-# Ce travail permet de :
+-   Travailler en parallèle sur un projet PHP.
 
-# 
+-   Utiliser les Pull Requests pour intégrer les modifications.
 
-# \- Installer et configurer Git.
+-   Effectuer une revue de code.
 
-# \- Créer et gérer un dépôt GitHub.
+-   Comprendre et résoudre les conflits de fusion.
 
-# \- Utiliser l'authentification SSH.
+### Présentation du projet
 
-# \- Cloner un dépôt distant.
+Le projet consiste à développer une mini-application PHP intitulée **ISI
+Student Manager**.
 
-# \- Créer des branches individuelles.
+Cette application permet de présenter une liste d'étudiants et une liste
+de projets, avec une page d'accueil et une mise en forme CSS.
 
-# \- Travailler en parallèle sur un projet PHP.
+### Organisation du groupe
 
-# \- Utiliser les Pull Requests pour intégrer les modifications.
+| Membre \| Responsabilité \| Fichier \| Branche \|
 
-# \- Effectuer une revue de code.
+| ---------- \| -------------------------------- \| ------------- \|
+  ----------------- \|
 
-# \- Comprendre et résoudre les conflits de fusion.
+| Étudiant A \| Chef de projet et page d'accueil \| index.php \|
+  feature/accueil \|
 
-# 
+| Étudiant B \| Liste des étudiants \| etudiants.php \|
+  feature/etudiants \|
 
-# \### Présentation du projet
+| Étudiant C \| Liste des projets \| projets.php \| feature/projets \|
 
-# 
+| Étudiant EL BARKI Razan \| CSS et navigation \| style.css \|
+  feature/style \|
 
-# Le projet consiste à développer une mini-application PHP intitulée \*\*ISI Student Manager\*\*.
+------------------------------------------------------------------------
 
-# 
+# PARTIE A --- Réalisation du TP
 
-# Cette application permet de présenter une liste d'étudiants et une liste de projets, avec une page d'accueil et une mise en forme CSS.
+## Exercice 1 --- Installation et configuration de Git
 
-# 
+### 1. Vérifier que Git est installé
 
-# \### Organisation du groupe
+![exercice1-version](captures/exercice1-version.png)
 
-# 
+Cette commande permet de vérifier l'installation de Git et d'afficher sa
+version.
 
-# | Membre                  | Responsabilité                   | Fichier       | Branche           |
+### 2. Configurer le nom et l'adresse e-mail
 
-# | ----------              | -------------------------------- | ------------- | ----------------- |
+![exercice1-configuration](captures/exercice1-configuration.png)
 
-# | Étudiant A              | Chef de projet et page d'accueil | index.php     | feature/accueil   |
+Ces informations seront associées aux commits réalisés sur cet
+ordinateur.
 
-# | Étudiant B              | Liste des étudiants              | etudiants.php | feature/etudiants |
+### 3. Afficher les paramètres
 
-# | Étudiant C              | Liste des projets                | projets.php   | feature/projets   |
+![1.3](captures/1.3.png)
 
-# | Étudiant EL BARKI Razan | CSS et navigation                | style.css     | feature/style     |
+Cette commande affiche les paramètres de configuration globaux de Git.
 
-# 
+### 
 
-# 
+**Question 1 --- Quel est le rôle de `user.name` ?**
 
-# 
+`user.name` permet de définir le nom de l'auteur qui sera enregistré
+dans les commits Git.
 
-# \---
+**Question 2 --- Quel est le rôle de `user.email` ?**
 
-# 
+`user.email` permet de définir l'adresse e-mail associée à l'auteur des
+commits. Elle permet notamment d'associer les contributions à un compte
+GitHub lorsque l'adresse est reconnue par GitHub.
 
-# \# PARTIE A — Réalisation du TP
+------------------------------------------------------------------------
 
-# 
+## Exercice 2 --- Création du dépôt commun sur GitHub
 
-# \## Exercice 1 — Installation et configuration de Git
+### 1. Connexion à GitHub
 
-# 
+L'étudiant A se connecte à son compte GitHub :
 
-# \### 1. Vérifier que Git est installé
+<https://github.com/>
 
-# 
+### 2. Création du dépôt
 
-!\[Capture d'écran 1.3](captures/exercice1-version.png)
+L'étudiant A crée un nouveau dépôt avec les paramètres suivants :
 
-# 
+-   Repository name : `ISI-Student-Manager-Groupe9`
 
-# Cette commande permet de vérifier l'installation de Git et d'afficher sa version.
+-   Visibility : Public
 
-# 
+-   Option : Add a README file
 
-# \### 2. Configurer le nom et l'adresse e-mail
+Le dépôt est ensuite créé en cliquant sur **Create repository**.
 
-# 
+### 3. Invitation des collaborateurs
 
-!\[Capture 1](captures/exercice1-configuration.png)
+Dans le dépôt :
 
+1.  Ouvrir Settings.
 
+2.  Accéder à Collaborators.
 
+3.  Cliquer sur Add people.
 
+4.  Rechercher les comptes GitHub des autres étudiants.
 
-# ```
+5.  Envoyer les invitations.
 
-# 
+![exercice2-depot](captures/exercice2-depot.png)
 
-# Ces informations seront associées aux commits réalisés sur cet ordinateur.
+### 4. Acceptation des invitations
 
-# 
+Les étudiants B, C et D se connectent à leurs comptes GitHub et
+acceptent les invitations.
 
-# \### 3. Afficher les paramètres
+![exercice2-collaborateurs](captures/exercice2-collaborateurs.png)
 
+**Question --- Pourquoi créer un dépôt commun ?**
 
+Le dépôt commun permet de centraliser le code source du projet et de
+faciliter la collaboration entre les différents membres du groupe.
 
-!\[Capture 1](captures/1.3.png)
+------------------------------------------------------------------------
 
+## Exercice 3 --- Clonage et premier commit
 
+### 1. Chaque étudiant clone le dépôt sur sa machine.
 
-# Cette commande affiche les paramètres de configuration globaux de Git.
+              Etudiant A :
 
-# 
+![Ex3.1.1](captures/Ex3.1.1.png)
 
-# \### 
+![Ex3.1.2](captures/Ex3.1.2.png)
 
-# 
+![Ex3.1.3](captures/Ex3.1.3.png)
 
-# \*\* 1 : Quel est le rôle de user.name ?\*\*
+               Etudiant D :
 
-# 
+![Ex3.4.1](captures/Ex3.4.1.png)
 
-# `user.name` permet de définir le nom de l'auteur qui sera enregistré dans les commits Git.
+![Ex3.4.2](captures/Ex3.4.2.png)
 
-# 
+![Ex3.4.5](captures/Ex3.4.5.png)
 
-# \*\* 2 : Quel est le rôle de user.email ?\*\*
+![Ex3.4.4](captures/Ex3.4.4.png)
 
-# 
+### 2. Afficher l'adresse origin, les branches locales et distantes et le statut.
 
-# `user.email` permet de définir l'adresse e-mail associée à l'auteur des commits. Elle permet notamment d'associer les contributions à un compte GitHub lorsque l'adresse est reconnue par GitHub.
+                Etudiant A :
 
-# \---
+![Ex3.Q2.1](captures/Ex3.Q2.1.png)
 
-# 
+                Etudiant D :
 
-# \## Exercice 2 — Création du dépôt commun sur GitHub
+![Ex3.Q2.4.1](captures/Ex3.Q2.4.1.png)
 
-# 
+![Ex3.Q2.4.2](captures/Ex3.Q2.4.2.png)
 
-# \### 1. Connexion à GitHub
+![Ex3.Q2.4.3](captures/Ex3.Q2.4.3.png)
 
-# 
+![Ex3.Q2.4.4](captures/Ex3.Q2.4.4.png)
 
-# L'étudiant A se connecte à son compte GitHub :
+### 3. Expliquer clone, origin, main, origin/main et HEAD.
 
-# 
+La commande `git clone` permet de copier un dépôt distant sur
+l'ordinateur local. Elle récupère les fichiers ainsi que l'historique
+des commits.
 
-# \[https://github.com/](https://github.com/)
+`origin` est le nom par défaut donné au dépôt distant lors du clonage.
+Il permet de communiquer avec le dépôt hébergé sur GitHub.
 
-# 
+`main` est la branche principale du projet. Elle contient la version
+commune et intégrée de l'application.
 
-# \### 2. Création du dépôt
+`origin/main` est la référence locale représentant l'état de la branche
+`main` sur le dépôt distant.
 
-# 
+`HEAD` est une référence qui indique la position actuelle dans le dépôt
+Git, généralement le commit de la branche actuellement sélectionnée.
 
-# L'étudiant A crée un nouveau dépôt avec les paramètres suivants :
+------------------------------------------------------------------------
 
-# 
+## Exercice 4 --- Commit initial
 
-# \- Repository name : `ISI-Student-Manager-Groupe9`
+### 1. Création du fichier index.php
 
-# \- Visibility : Public
+L'étudiant A crée le fichier `index.php` :
 
-# \- Option : Add a README file
+                Etudiant A :
 
-# 
+![Ex4.1.1](captures/Ex4.1.1.png)
 
-# Le dépôt est ensuite créé en cliquant sur \*\*Create repository\*\*.
+![Ex4.1.2](captures/Ex4.1.2.png)
 
-# 
+![Ex4.1.3](captures/Ex4.1.3.png)
 
-# \### 3. Invitation des collaborateurs
+![Ex4.1.4](captures/Ex4.1.4.png)
 
-# 
+Les autres étudiants récupèrent la version initiale :
 
-# Dans le dépôt :
+                Etudiant A :
 
-# 
+![Ex4.4.1](captures/Ex4.4.1.png)
 
-# 1\. Ouvrir Settings.
+![Ex4.4.2](captures/Ex4.4.2.png)
 
-# 2\. Accéder à Collaborators.
+**Quelle est la différence entre commit et push ?**
 
-# 3\. Cliquer sur Add people.
+-   `git commit` permet d'enregistrer les modifications dans
+    l'historique du dépôt local.
 
-# 4\. Rechercher les comptes GitHub des autres étudiants.
+-   `git push` permet d'envoyer les commits locaux vers le dépôt distant
+    sur GitHub.
 
-# 5\. Envoyer les invitations.
+Ainsi, un commit est un enregistrement local, tandis qu'un push permet
+de partager cet enregistrement avec les autres membres du groupe.
 
+pôt par les autres membres.
 
+------------------------------------------------------------------------
 
+## Exercice 5 --- Création des branches individuelles
 
+Chaque étudiant crée sa branche à partir d'une branche `main` à jour.
 
-!\[Capture 1](captures/exercice2-depot.png)
+                  Etudiant A :
 
-# 
+![Ex5.1.1](captures/Ex5.1.1.png)
 
-# \### 4. Acceptation des invitations
+![Ex5.1.2](captures/Ex5.1.2.png)
 
-# 
+                  Etudiant D :
 
-# Les étudiants B, C et D se connectent à leurs comptes GitHub et acceptent les invitations.
+![Ex5.4.1](captures/Ex5.4.1.png)
 
-# 
+![Ex5.4.2](captures/Ex5.4.2.png)
 
-!\[Capture 1](captures/exercice2-collaborateurs.png)
+La branche permet à chaque étudiant de développer sa fonctionnalité
+indépendamment, sans modifier directement la branche principale.
 
-# 
+La commande `git branch` affiche les branches locales. L'étoile indique
+la branche active.
 
-# \*\* 1 : Pourquoi créer un dépôt commun ?\*\*
+------------------------------------------------------------------------
 
-# 
+## Exercice 6 --- Développement en parallèle
 
-# Le dépôt commun permet de centraliser le code source du projet et de faciliter la collaboration entre les différents membres du groupe.
+Chaque étudiant développe sa fonctionnalité sur sa propre branche.
 
-# 
+                  Etudiant D :
 
-# \---
+![Ex6.4.1](captures/Ex6.4.1.png)
 
-# 
+![Ex6.4.2](captures/Ex6.4.2.png)
 
-# \## Exercice 3 — Clonage et premier commit
+![Ex6.4.3](captures/Ex6.4.3.png)
 
-# 
+![Ex6.4.4](captures/Ex6.4.4.png)
 
-# \### 1. Chaque étudiant clone le dépôt sur sa machine.
+------------------------------------------------------------------------
 
+## Exercice 7 --- Pull Requests et revue de code
 
+### 1. Création des Pull Requests
 
-&#x20;             Etudiant A :
+Chaque étudiant ouvre GitHub et crée une Pull Request.
 
-&#x20;         
+Les Pull Requests sont :
 
-!\[Capture 1](captures/Ex3.1.1.png)
+| Auteur \| Branche source \| Branche cible \|
 
-!\[Capture 1](captures/Ex3.1.2.png)
+| ------ \| ----------------- \| ------------- \|
 
-!\[Capture 1](captures/Ex3.1.3.png)
+| A \| feature/accueil \| main \|
 
-&#x20;                 
+| B \| feature/etudiants \| main \|
 
-&#x20;              Etudiant D :
+| C \| feature/projets \| main \|
 
-!\[Capture 1](captures/Ex3.4.1.png)
+| D \| feature/style \| main \|
 
-!\[Capture 1](captures/Ex3.4.2.png)
+                  Etudiant A :
 
-!\[Capture 1](captures/Ex3.4.5.png)
+![Ex7.1.1](captures/Ex7.1.1.png)
 
-!\[Capture 1](captures/Ex3.4.4.png)
+                  Etudiant D :
 
+![Ex7.4.1](captures/Ex7.4.1.png)
 
+![Ex7.4.2](captures/Ex7.4.2.png)
 
-# \### 2. Afficher l’adresse origin, les branches locales et distantes et le statut.
+![Ex7.4.3](captures/Ex7.4.3.png)
 
-&#x20;               Etudiant A :
+![Ex7.4.4](captures/Ex7.4.4.png)
 
-!\[Capture 1](captures/Ex3.Q2.1.png)
+Une Pull Request permet de proposer des modifications avant leur
+intégration dans la branche principale.
 
-&#x20;               Etudiant D :
+Elle présente plusieurs avantages :
 
-!\[Capture 1](captures/Ex3.Q2.4.1.png)
+-   Permettre la revue du code par les autres membres.
 
-!\[Capture 1](captures/Ex3.Q2.4.2.png)
+-   Détecter les erreurs avant la fusion.
 
-!\[Capture 1](captures/Ex3.Q2.4.3.png)
+-   Ajouter des commentaires et des suggestions.
 
-!\[Capture 1](captures/Ex3.Q2.4.4.png)
+-   Faciliter la communication entre les développeurs.
 
-# \### 3. Expliquer clone, origin, main, origin/main et HEAD.
+-   Maintenir une branche principale plus stable.
 
-# 
+-   Conserver une trace des contributions de chaque membre.
 
-# La commande `git clone` permet de copier un dépôt distant sur l'ordinateur local. Elle récupère les fichiers ainsi que l'historique des commits.
+Un push direct sur `main` ne permet pas d'effectuer cette étape de
+validation collective avant l'intégration.
 
-# 
+------------------------------------------------------------------------
 
-# `origin` est le nom par défaut donné au dépôt distant lors du clonage. Il permet de communiquer avec le dépôt hébergé sur GitHub.
+## Exercice 8 --- Conflit de fusion contrôlé
 
-# 
+### Provoquer volontairement un conflit de fusion afin de comprendre pourquoi Git ne peut pas toujours fusionner automatiquement les modifications.
 
-# `main` est la branche principale du projet. Elle contient la version commune et intégrée de l'application.
+### 1. Création du fichier configuration.txt par A
 
-# 
+                  Etudiant A :
 
-# `origin/main` est la référence locale représentant l'état de la branche `main` sur le dépôt distant.
+![Ex8.1.1](captures/Ex8.1.1.png)
 
-# 
+![Ex8.1.2](captures/Ex8.1.2.png)
 
-# `HEAD` est une référence qui indique la position actuelle dans le dépôt Git, généralement le commit de la branche actuellement sélectionnée.
+![Ex8.1.3](captures/Ex8.1.3.png)
 
-# \---
+### 2. Création des branches B et C
 
-# 
+Les étudiants B et C récupèrent le même état initial de `main`.
 
-# \## Exercice 4 — Commit initial
+Étudiant B :
 
-# 
+``` bash
 
-# \### 1. Création du fichier index.php
+git switch main
 
-# 
+git pull origin main
 
-# L'étudiant A crée le fichier `index.php` :
+git switch -c feature/version-b
+```
 
-# 
+Étudiant C :
 
-&#x20;               Etudiant A :
+``` bash
 
-!\[Capture 1](captures/Ex4.1.1.png)
+git switch main
 
-!\[Capture 1](captures/Ex4.1.2.png)
+git pull origin main
 
-!\[Capture 1](captures/Ex4.1.3.png)
+git switch -c feature/version-c
+```
 
-!\[Capture 1](captures/Ex4.1.4.png)
+### 3. Modification par B
 
+B remplace la ligne :
 
+``` text
 
-# Les autres étudiants récupèrent la version initiale :
+Version : 1.0
+```
 
-&#x20;               Etudiant A :
+par :
 
-!\[Capture 1](captures/Ex4.4.1.png)
+``` text
 
-!\[Capture 1](captures/Ex4.4.2.png)
+Version : 2.0 - Etudiant B
+```
 
+Puis il exécute :
 
+``` bash
 
-# 
+git add configuration.txt
 
-# \*\*Quelle est la différence entre commit et push ?\*\*
+git commit -m "Modification de version par B"
 
-# 
+git push -u origin feature/version-b
+```
 
-# \- `git commit` permet d'enregistrer les modifications dans l'historique du dépôt local.
+### 4. Modification par C
 
-# \- `git push` permet d'envoyer les commits locaux vers le dépôt distant sur GitHub.
+C remplace la même ligne par :
 
-# 
+``` text
 
-# Ainsi, un commit est un enregistrement local, tandis qu'un push permet de partager cet enregistrement avec les autres membres du groupe.
+Version : 3.0 - Etudiant C
+```
 
-# pôt par les autres membres.
+Puis il exécute :
 
-# \---
+``` bash
 
-# 
+git add configuration.txt
 
-# \## Exercice 5 — Création des branches individuelles
+git commit -m "Modification de version par C"
 
-# 
+git push -u origin feature/version-c
+```
 
-# Chaque étudiant crée sa branche à partir d'une branche `main` à jour.
+### 5. Fusion de la Pull Request de C
 
-# 
+C crée une Pull Request :
 
-&#x20;                 Etudiant A :
+-   Source : `feature/version-c`
 
-!\[Capture 1](captures/Ex5.1.1.png)
+-   Destination : `main`
 
-!\[Capture 1](captures/Ex5.1.2.png)
+Après revue, la Pull Request est fusionnée.
 
+La branche `main` contient maintenant :
 
+``` text
 
-&#x20;                 Etudiant D :
+Nom du projet : ISI Student Manager
 
-!\[Capture 1](captures/Ex5.4.1.png)
+Version : 3.0 - Etudiant C
 
-!\[Capture 1](captures/Ex5.4.2.png)
+Responsable : Groupe ISI
+```
 
+### 6. Récupération de `main` par B
 
+B revient sur sa branche :
 
-# ```
+``` bash
 
-# 
+git switch feature/version-b
 
-# La branche permet à chaque étudiant de développer sa fonctionnalité indépendamment, sans modifier directement la branche principale.
+git fetch origin
 
-# 
+git merge origin/main
+```
 
-# La commande `git branch` affiche les branches locales. L'étoile indique la branche active.
+Git détecte un conflit parce que B et C ont modifié la même ligne du
+même fichier.
 
-# \---
+### 7. Résolution du conflit
 
-# 
+B ouvre le fichier :
 
-# \## Exercice 6 — Développement en parallèle
+``` bash
 
-# 
+notepad configuration.txt
+```
 
-# Chaque étudiant développe sa fonctionnalité sur sa propre branche.
+Git affiche des marqueurs de conflit similaires à ceux-ci :
 
-# 
+``` text
 
-&#x20;                 Etudiant D :
+<<<<<<< HEAD
 
-!\[Capture 1](captures/Ex6.4.1.png)
+Version : 2.0 - Etudiant B
 
-!\[Capture 1](captures/Ex6.4.2.png)
+=======
 
-!\[Capture 1](captures/Ex6.4.3.png)
+Version : 3.0 - Etudiant C
 
-!\[Capture 1](captures/Ex6.4.4.png)
+>>>>>>> origin/main
+```
 
-# \---
+B supprime les marqueurs et choisit la version commune demandée :
 
-# 
+``` text
 
-# \## Exercice 7 — Pull Requests et revue de code
+Nom du projet : ISI Student Manager
 
-# 
+Version : 3.0 - Version collaborative
 
-# \### 1. Création des Pull Requests
+Responsable : Groupe ISI
+```
 
-# 
+### 8. Finalisation de la résolution
 
-# Chaque étudiant ouvre GitHub et crée une Pull Request.
+B enregistre le fichier et exécute :
 
-# 
+``` bash
 
-# Les Pull Requests sont :
+git add configuration.txt
 
-# 
+git commit -m "Resolution du conflit de version"
 
-# | Auteur | Branche source    | Branche cible |
+git push origin feature/version-b
+```
 
-# | ------ | ----------------- | ------------- |
+Ensuite, B crée une nouvelle Pull Request :
 
-# | A      | feature/accueil   | main          |
+-   Source : `feature/version-b`
 
-# | B      | feature/etudiants | main          |
+-   Destination : `main`
 
-# | C      | feature/projets   | main          |
+Après revue et validation, la Pull Request est fusionnée.
 
-# | D      | feature/style     | main          |
+------------------------------------------------------------------------
 
-# 
+## Exercice 9 --- Vérification et livrables
 
-&#x20;                 Etudiant A :
+### 1. Afficher l'historique graphique des commits et les branches
 
-!\[Capture 1](captures/Ex7.1.1.png)
+Nous exécutons :
 
-&#x20;                 Etudiant D :
+``` bash
 
-!\[Capture 1](captures/Ex7.4.1.png)
+git log --oneline --graph --all --decorate
+```
 
-!\[Capture 1](captures/Ex7.4.2.png)
+Cette commande affiche l'historique des commits sous forme graphique,
+avec les différentes branches et les fusions.
 
-!\[Capture 1](captures/Ex7.4.3.png)
+Pour afficher les branches :
 
-!\[Capture 1](captures/Ex7.4.4.png)
+``` bash
 
+git branch -a
+```
 
+### 2. Vérifier que main est à jour
 
+``` bash
 
+git switch main
 
-# Une Pull Request permet de proposer des modifications avant leur intégration dans la branche principale.
+git pull origin main
 
-# 
+git status
+```
 
-# Elle présente plusieurs avantages :
+La commande `git status` permet de vérifier l'état du dépôt local.
 
-# 
+### 3. Vérifier les fichiers du projet
 
-# \- Permettre la revue du code par les autres membres.
+Les fichiers attendus sont :
 
-# \- Détecter les erreurs avant la fusion.
+``` text
 
-# \- Ajouter des commentaires et des suggestions.
+ISI-Student-Manager-GroupeXX/
 
-# \- Faciliter la communication entre les développeurs.
+│
 
-# \- Maintenir une branche principale plus stable.
+├── README.md
 
-# \- Conserver une trace des contributions de chaque membre.
+├── index.php
 
-# 
+├── etudiants.php
 
-# Un push direct sur `main` ne permet pas d'effectuer cette étape de validation collective avant l'intégration.
+├── projets.php
 
-# \---
+├── style.css
 
-# 
+└── configuration.txt
+```
 
-# \## Exercice 8 — Conflit de fusion contrôlé
+### Livrables demandés
 
-# 
+**a. URL du dépôt GitHub du groupe :**
 
-# \### Provoquer volontairement un conflit de fusion afin de comprendre pourquoi Git ne peut pas toujours fusionner automatiquement les modifications.
+\[Insérer ici le lien réel du dépôt GitHub\]
 
-# 
+**b. Fichier README.md :**
 
-# \### 1. Création du fichier configuration.txt par A
+Ce fichier contient la présentation du groupe, les informations
+d'installation, les commandes Git utilisées, les réponses aux questions
+et les étapes de réalisation du TP.
 
+------------------------------------------------------------------------
 
+# Conclusion générale
 
-&#x20;                 Etudiant A :
+Ce TP nous a permis de découvrir et de pratiquer la gestion
+collaborative des versions avec Git et GitHub.
 
-!\[Capture 1](captures/Ex8.1.1.png)
+Nous avons appris à configurer Git, créer un dépôt distant, utiliser
+SSH, cloner un projet, créer des branches individuelles et travailler
+simultanément sur différentes fonctionnalités.
 
-!\[Capture 1](captures/Ex8.1.2.png)
+Nous avons également utilisé les Pull Requests pour effectuer des revues
+de code et intégrer les contributions dans la branche principale.
 
-!\[Capture 1](captures/Ex8.1.3.png)
+Enfin, nous avons provoqué et résolu un conflit de fusion afin de
+comprendre comment Git gère les modifications concurrentes.
 
-# 
+Cette expérience nous a permis de mieux comprendre l'importance du
+travail collaboratif, du suivi des modifications et de l'organisation du
+développement logiciel en équipe.
 
-# \### 2. Création des branches B et C
+------------------------------------------------------------------------
 
-# 
+**Fin du TP 3 --- Gestion collaborative des versions avec Git et
+GitHub.**
 
-# Les étudiants B et C récupèrent le même état initial de `main`.
+------------------------------------------------------------------------
 
-# 
+## Vérifications avant le dépôt final
 
-# Étudiant B :
-
-# 
-
-# ```bash
-
-# git switch main
-
-# git pull origin main
-
-# git switch -c feature/version-b
-
-# ```
-
-# 
-
-# Étudiant C :
-
-# 
-
-# ```bash
-
-# git switch main
-
-# git pull origin main
-
-# git switch -c feature/version-c
-
-# ```
-
-# 
-
-# \### . Modification par B
-
-# 
-
-# B remplace la ligne :
-
-# 
-
-# ```text
-
-# Version : 1.0
-
-# ```
-
-# 
-
-# par :
-
-# 
-
-# ```text
-
-# Version : 2.0 - Etudiant B
-
-# ```
-
-# 
-
-# Puis il exécute :
-
-# 
-
-# ```bash
-
-# git add configuration.txt
-
-# git commit -m "Modification de version par B"
-
-# git push -u origin feature/version-b
-
-# ```
-
-# 
-
-# \### . Modification par C
-
-# 
-
-# C remplace la même ligne par :
-
-# 
-
-# ```text
-
-# Version : 3.0 - Etudiant C
-
-# ```
-
-# 
-
-# Puis il exécute :
-
-# 
-
-# ```bash
-
-# git add configuration.txt
-
-# git commit -m "Modification de version par C"
-
-# git push -u origin feature/version-c
-
-# ```
-
-# 
-
-# \### 5. Fusion de la Pull Request de C
-
-# 
-
-# C crée une Pull Request :
-
-# 
-
-# \- Source : `feature/version-c`
-
-# \- Destination : `main`
-
-# 
-
-# Après revue, la Pull Request est fusionnée.
-
-# 
-
-# La branche `main` contient maintenant :
-
-# 
-
-# ```text
-
-# Nom du projet : ISI Student Manager
-
-# Version : 3.0 - Etudiant C
-
-# Responsable : Groupe ISI
-
-# ```
-
-# 
-
-# \### . Récupération de main par B
-
-# 
-
-# B revient sur sa branche :
-
-# 
-
-# ```bash
-
-# git switch feature/version-b
-
-# git fetch origin
-
-# git merge origin/main
-
-# ```
-
-# 
-
-# Git détecte un conflit parce que B et C ont modifié la même ligne du même fichier.
-
-# 
-
-# \### . Résolution du conflit
-
-# 
-
-# B ouvre le fichier :
-
-# 
-
-# ```bash
-
-# notepad configuration.txt
-
-# ```
-
-# 
-
-# Git affiche des marqueurs de conflit similaires à ceux-ci :
-
-# 
-
-# ```text
-
-# <<<<<<< HEAD
-
-# Version : 2.0 - Etudiant B
-
-# =======
-
-# Version : 3.0 - Etudiant C
-
-# >>>>>>> origin/main
-
-# ```
-
-# 
-
-# B supprime les marqueurs et choisit la version commune demandée :
-
-# 
-
-# ```text
-
-# Nom du projet : ISI Student Manager
-
-# Version : 3.0 - Version collaborative
-
-# Responsable : Groupe ISI
-
-# ```
-
-# 
-
-# \### . Finalisation de la résolution
-
-# 
-
-# B enregistre le fichier et exécute :
-
-# 
-
-# ```bash
-
-# git add configuration.txt
-
-# git commit -m "Resolution du conflit de version"
-
-# git push origin feature/version-b
-
-# ```
-
-# 
-
-# Ensuite, B crée une nouvelle Pull Request :
-
-# 
-
-# \- Source : `feature/version-b`
-
-# \- Destination : `main`
-
-# 
-
-# Après revue et validation, la Pull Request est fusionnée.
-
-# \---
-
-# 
-
-# \## Exercice 9 — Vérification et livrables
-
-# 
-
-# \### 1. Afficher l'historique graphique des commits et les branches
-
-# 
-
-# Nous exécutons :
-
-# 
-
-# ```bash
-
-# git log --oneline --graph --all --decorate
-
-# ```
-
-# 
-
-# Cette commande affiche l'historique des commits sous forme graphique, avec les différentes branches et les fusions.
-
-# 
-
-# Pour afficher les branches :
-
-# 
-
-# ```bash
-
-# git branch -a
-
-# ```
-
-# 
-
-# \### 2. Vérifier que main est à jour
-
-# 
-
-# ```bash
-
-# git switch main
-
-# git pull origin main
-
-# git status
-
-# ```
-
-# 
-
-# La commande `git status` permet de vérifier l'état du dépôt local.
-
-# 
-
-# \### 3. Vérifier les fichiers du projet
-
-# 
-
-# Les fichiers attendus sont :
-
-# 
-
-# ```text
-
-# ISI-Student-Manager-GroupeXX/
-
-# │
-
-# ├── README.md
-
-# ├── index.php
-
-# ├── etudiants.php
-
-# ├── projets.php
-
-# ├── style.css
-
-# └── configuration.txt
-
-# ```
-
-# 
-
-# 
-
-# \### Livrables demandés
-
-# 
-
-# \*\*a. URL du dépôt GitHub du groupe :\*\*
-
-# 
-
-# \[Insérer ici le lien réel du dépôt GitHub]
-
-# 
-
-# \*\*b. Fichier README.md :\*\*
-
-# 
-
-# Ce fichier contient la présentation du groupe, les informations d'installation, les commandes Git utilisées, les réponses aux questions et les étapes de réalisation du TP.
-
-# 
-
-# \---
-
-# 
-
-# \# Conclusion générale
-
-# 
-
-# Ce TP nous a permis de découvrir et de pratiquer la gestion collaborative des versions avec Git et GitHub.
-
-# 
-
-# Nous avons appris à configurer Git, créer un dépôt distant, utiliser SSH, cloner un projet, créer des branches individuelles et travailler simultanément sur différentes fonctionnalités.
-
-# 
-
-# Nous avons également utilisé les Pull Requests pour effectuer des revues de code et intégrer les contributions dans la branche principale.
-
-# 
-
-# Enfin, nous avons provoqué et résolu un conflit de fusion afin de comprendre comment Git gère les modifications concurrentes.
-
-# 
-
-# Cette expérience nous a permis de mieux comprendre l'importance du travail collaboratif, du suivi des modifications et de l'organisation du développement logiciel en équipe.
-
-# 
-
-# \---
-
-# 
-
-# \*\*Fin du TP 3 — Gestion collaborative des versions avec Git et GitHub.\*\*
-
-
-
+-   Vérifier que chaque image référencée existe bien dans `captures/` et
+    que son nom respecte exactement les majuscules, minuscules et
+    extensions.
+-   Remplacer `[Insérer ici le lien réel du dépôt GitHub]` par l'URL
+    réelle du dépôt.
+-   Compléter les éventuelles captures et réponses manquantes, notamment
+    pour l'exercice 9.
+-   Vérifier que les commandes et les captures correspondent aux
+    manipulations réellement effectuées par le groupe.
