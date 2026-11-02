@@ -194,7 +194,7 @@ faciliter la collaboration entre les différents membres du groupe.
 
 ![Ex3.4.2](captures/Ex3.4.2.png)
 
-![Ex3.4.3](captures/Ex3.4.3.png)
+![Ex.3.4.3](captures/Ex.3.4.3.png)
 
 ![Ex3.4..4](captures/Ex3.4..4.png)
 
