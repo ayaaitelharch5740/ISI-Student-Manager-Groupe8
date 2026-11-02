@@ -196,7 +196,7 @@ faciliter la collaboration entre les différents membres du groupe.
 
 ![Ex3.4.5](captures/Ex3.4.5.png)
 
-![Ex3.4.4](captures/Ex3.4.4.png)
+![Ex3.4..4](captures/Ex3.4..4.png)
 
 ### 2. Afficher l'adresse origin, les branches locales et distantes et le statut.
 
