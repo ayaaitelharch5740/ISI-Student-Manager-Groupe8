@@ -115,12 +115,12 @@ Cette commande affiche les paramètres de configuration globaux de Git.
 
 ### 
 
-**Question 1 --- Quel est le rôle de `user.name` ?**
+** --- Quel est le rôle de `user.name` ?**
 
 `user.name` permet de définir le nom de l'auteur qui sera enregistré
 dans les commits Git.
 
-**Question 2 --- Quel est le rôle de `user.email` ?**
+** --- Quel est le rôle de `user.email` ?**
 
 `user.email` permet de définir l'adresse e-mail associée à l'auteur des
 commits. Elle permet notamment d'associer les contributions à un compte
@@ -170,8 +170,6 @@ Les étudiants B, C et D se connectent à leurs comptes GitHub et
 acceptent les invitations.
 
 ![exercice2-collaborateurs](captures/exercice2-collaborateurs.png)
-
-**Question --- Pourquoi créer un dépôt commun ?**
 
 Le dépôt commun permet de centraliser le code source du projet et de
 faciliter la collaboration entre les différents membres du groupe.
