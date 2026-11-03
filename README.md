@@ -428,7 +428,7 @@ Les étudiants B et C récupèrent le même état initial de `main`.
 
 Étudiant B :
 
-![Ex8.2.2.1](captures/Ex8.2.2.1.jpeg)
+![Ex8.2.2.1](captures/Ex8.2.2.1.jpg)
 
 Étudiant C :
 
