@@ -537,7 +537,7 @@ Git affiche des marqueurs de conflit  :
 
 B supprime les marqueurs et choisit la version commune demandée :
 
-[conflit](captures/conflit.png)
+![conflit](captures/conflit.png)
 
 
 ### 8. Finalisation de la résolution
