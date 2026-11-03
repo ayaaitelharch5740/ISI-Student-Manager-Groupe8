@@ -1,10 +1,11 @@
-# TP 3 --- Gestion collaborative des versions avec Git et GitHub
+  # TP 3 --- Gestion collaborative des versions avec Git et GitHub
 
 **Université Cadi Ayyad -- Faculté des Sciences Semlalia**\
 **Département :** Informatique\
 **Module :** Méthodologies de développement et Ateliers en PHP\
 **Niveau :** Master ISI -- S1\
-**Professeur :** Prof. Ikidid Abdelouafi
+**Professeur :** Prof. Ikidid Abdelouafi\
+**Groupe :** 8
 
 ------------------------------------------------------------------------
 
@@ -71,23 +72,12 @@ de projets, avec une page d'accueil et une mise en forme CSS.
 
 ### Organisation du groupe
 
-| Membre \| Responsabilité \| Fichier \| Branche \|
-
-| ---------- \| -------------------------------- \| ------------- \|
-  ----------------- \|
-
-| Étudiant A: AIT EL HARCH Aya\| Chef de projet et page d'accueil \| index.php \|
-  feature/accueil \|
-
-| Étudiant B: LAHMAMA Chaymae \| Liste des étudiants \| etudiants.php \|
-  feature/etudiants \|
-
-| Étudiant C: RAFIQ Wissam    \| Liste des projets \| projets.php \| feature/projets \|
-
-| Étudiant D: EL BARKI Razan  \| CSS et navigation \| style.css \|
-  feature/style \|
-
-------------------------------------------------------------------------
+| Membre | Responsabilité | Fichier | Branche |
+|---|---|---|---|
+| **Étudiant A : AIT EL HARCH Aya** | Chef de projet et page d'accueil | `index.php` | `feature/accueil` |
+| **Étudiant B : LAHMAMA Chaymae** | Liste des étudiants | `etudiants.php` | `feature/etudiants` |
+| **Étudiant C : RAFIQ Wissam** | Liste des projets | `projets.php` | `feature/projets` |
+| **Étudiant D : EL BARKI Razan** | CSS et navigation | `style.css` | `feature/style` |
 
 # PARTIE A --- Réalisation du TP
 
@@ -197,6 +187,10 @@ faciliter la collaboration entre les différents membres du groupe.
 ![Ex3.2.3](captures/Ex3.2.3.jpeg)
 
 ![Ex3.2.4](captures/Ex3.2.4.jpeg)
+
+               Etudiant C :
+               
+![Ex3.3.1](captures/Ex3.3.1.png)
 
                Etudiant D :
 
@@ -309,6 +303,9 @@ Chaque étudiant crée sa branche à partir d'une branche `main` à jour.
                
 ![Ex5.2.1](captures/Ex5.2.1.jpeg)
 
+               Etudiant C :
+![Ex5.3.1](captures/Ex5.3.1.png)
+
                   Etudiant D :
 
 ![Ex5.4.1](captures/Ex5.4.1.png)
@@ -331,6 +328,10 @@ Chaque étudiant développe sa fonctionnalité sur sa propre branche.
                
 ![Ex6.2.1](captures/Ex6.2.1.jpeg)
 
+               Etudiant C :
+![Ex6.3.1](captures/Ex6.3.1.png)
+![Ex6.3.2](captures/Ex6.3.2.png)
+
                   Etudiant D :
 
 ![Ex6.4.1](captures/Ex6.4.1.png)
@@ -351,18 +352,12 @@ Chaque étudiant ouvre GitHub et crée une Pull Request.
 
 Les Pull Requests sont :
 
-| Auteur \| Branche source \| Branche cible \|
-
-| ------ \| ----------------- \| ------------- \|
-
-| A \| feature/accueil \| main \|
-
-| B \| feature/etudiants \| main \|
-
-| C \| feature/projets \| main \|
-
-| D \| feature/style \| main \|
-
+| Auteur | Branche source | Branche cible |
+|---|---|---|
+| A | `feature/accueil` | `main` |
+| B | `feature/etudiants` | `main` |
+| C | `feature/projets` | `main` |
+| D | `feature/style` | `main` |
                   Etudiant A :
 
 ![Ex7.1.1](captures/Ex7.1.1.png)
@@ -422,6 +417,14 @@ validation collective avant l'intégration.
 
 ![Ex8.1.3](captures/Ex8.1.3.png)
 
+                  Etudiant C :
+                  
+![Ex8.3.1](captures/Ex8.3.1.png)
+
+![Ex8.3.2](captures/Ex8.3.2.png)
+
+![Ex8.3.3](captures/Ex8.3.3.png)
+                  
 ### 2. Création des branches B et C
 
 Les étudiants B et C récupèrent le même état initial de `main`.
@@ -605,13 +608,15 @@ La commande `git status` permet de vérifier l'état du dépôt local.
 
 ### 3. Vérifier les fichiers du projet
 
-Les fichiers attendus sont :
+Les fichiers  sont :
 
 ``` text
 
 ISI-Student-Manager-GroupeXX/
 
 │
+
+├── captures/
 
 ├── README.md
 
@@ -630,7 +635,7 @@ ISI-Student-Manager-GroupeXX/
 
 **a. URL du dépôt GitHub du groupe :**
 
-\[Insérer ici le lien réel du dépôt GitHub\]
+[ISI-Student-Manager-Groupe9](https://github.com/ayaaitelharch5740/ISI-Student-Manager-Groupe9)
 
 **b. Fichier README.md :**
 
@@ -639,6 +644,34 @@ d'installation, les commandes Git utilisées, les réponses aux questions
 et les étapes de réalisation du TP.
 
 ------------------------------------------------------------------------
+
+# Présentation de l'application ISI Student Manager
+
+Cette partie présente les différentes interfaces de notre application web développée en PHP et CSS.
+
+## 1. Page d'accueil
+
+La page d'accueil présente l'application et permet d'accéder aux différentes fonctionnalités.
+
+![accueil](captures/accueil.png)
+
+## 2. Gestion des étudiants
+
+Cette interface permet d'afficher la liste des étudiants enregistrés.
+
+![étudiants](captures/étudiants.png)
+
+## 3. Gestion des projets
+
+Cette interface présente les projets disponibles dans l'application.
+
+![Liste](captures/Liste.png)
+
+## 4. Navigation et mise en forme
+
+Cette capture présente la navigation et la mise en forme de l'application.
+
+![navigation](captures/navigation.png)
 
 # Conclusion générale
 
