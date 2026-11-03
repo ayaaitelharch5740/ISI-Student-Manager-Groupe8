@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ISI Student Manager</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Bienvenue dans ISI Student Manager</h1>

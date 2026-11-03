@@ -1,50 +1,166 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 30px;
-    background-color: #f4f4f4;
+```css
+/* ==========================
+   STYLE GLOBAL
+========================== */
+
+* {
+    box-sizing: border-box;
 }
 
-h1 {
-    color: #1e40af;
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 30px;
+    padding: 0;
+    color: #1e293b;
+    background-color: #f1f5f9;
+    line-height: 1.6;
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    background-color: #1e40af;
+    border-radius: 10px;
 }
 
 nav a {
-    margin-right: 15px;
+    color: white;
     text-decoration: none;
-    color: #2563eb;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #1e40af;
+    color: #bfdbfe;
     text-decoration: underline;
 }
+
+/* ==========================
+   TITRES
+========================== */
+
+h1, h2, h3 {
+    color: #1e40af;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* ==========================
+   TABLEAUX
+========================== */
 
 table {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
     background-color: white;
-    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 th {
-    padding: 10px;
+    padding: 14px;
     background-color: #1e40af;
     color: white;
     text-align: left;
+    font-weight: 600;
 }
 
 td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
 }
+
+tr:hover td {
+    background-color: #eff6ff;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ==========================
+   BOUTONS
+========================== */
+
+button,
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #1e40af;
+}
+
+/* ==========================
+   FORMULAIRES
+========================== */
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    margin: 8px 0 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
 
 @media (max-width: 600px) {
     body {
-        margin: 10px;
+        margin: 12px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 12px;
     }
 
     table {
-        font-size: 14px;
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 22px;
     }
 }
+```
