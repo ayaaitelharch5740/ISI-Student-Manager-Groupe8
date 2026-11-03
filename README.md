@@ -428,14 +428,7 @@ Les étudiants B et C récupèrent le même état initial de `main`.
 
 Étudiant B :
 
-``` bash
-
-git switch main
-
-git pull origin main
-
-git switch -c feature/version-b
-```
+![Ex8.2.2.1](captures/Ex8.2.2.1.jpeg)
 
 Étudiant C :
 
@@ -536,20 +529,9 @@ B ouvre le fichier :
 notepad configuration.txt
 ```
 
-Git affiche des marqueurs de conflit similaires à ceux-ci :
+Git affiche des marqueurs de conflit  :
 
-``` text
-
-<<<<<<< HEAD
-
-Version : 2.0 - Etudiant B
-
-=======
-
-Version : 3.0 - Etudiant C
-
->>>>>>> origin/main
-```
+![Ex8.2.2.2](captures/Ex8.2.2.2.jpeg)
 
 B supprime les marqueurs et choisit la version commune demandée :
 
@@ -580,6 +562,8 @@ Ensuite, B crée une nouvelle Pull Request :
 -   Source : `feature/version-b`
 
 -   Destination : `main`
+
+![Ex8.2.2.2.3](captures/Ex8.2.2.2.3.jpeg)
 
 Après revue et validation, la Pull Request est fusionnée.
 
