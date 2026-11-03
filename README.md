@@ -352,18 +352,12 @@ Chaque étudiant ouvre GitHub et crée une Pull Request.
 
 Les Pull Requests sont :
 
-| Auteur \| Branche source \| Branche cible \|
-
-| ------ \| ----------------- \| ------------- \|
-
-| A \| feature/accueil \| main \|
-
-| B \| feature/etudiants \| main \|
-
-| C \| feature/projets \| main \|
-
-| D \| feature/style \| main \|
-
+| Auteur | Branche source | Branche cible |
+|---|---|---|
+| A | `feature/accueil` | `main` |
+| B | `feature/etudiants` | `main` |
+| C | `feature/projets` | `main` |
+| D | `feature/style` | `main` |
                   Etudiant A :
 
 ![Ex7.1.1](captures/Ex7.1.1.png)
