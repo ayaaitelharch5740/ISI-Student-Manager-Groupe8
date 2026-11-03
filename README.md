@@ -630,7 +630,7 @@ ISI-Student-Manager-GroupeXX/
 
 **a. URL du dépôt GitHub du groupe :**
 
-\[Insérer ici le lien réel du dépôt GitHub\]
+[ISI-Student-Manager-Groupe9](https://github.com/ayaaitelharch5740/ISI-Student-Manager-Groupe9)
 
 **b. Fichier README.md :**
 
@@ -639,6 +639,34 @@ d'installation, les commandes Git utilisées, les réponses aux questions
 et les étapes de réalisation du TP.
 
 ------------------------------------------------------------------------
+
+# Présentation de l'application ISI Student Manager
+
+Cette partie présente les différentes interfaces de notre application web développée en PHP et CSS.
+
+## 1. Page d'accueil
+
+La page d'accueil présente l'application et permet d'accéder aux différentes fonctionnalités.
+
+![accueil](captures/accueil.png)
+
+## 2. Gestion des étudiants
+
+Cette interface permet d'afficher la liste des étudiants enregistrés.
+
+![étudiants](captures/étudiants.png)
+
+## 3. Gestion des projets
+
+Cette interface présente les projets disponibles dans l'application.
+
+![Liste](captures/Liste.png)
+
+## 4. Navigation et mise en forme
+
+Cette capture présente la navigation et la mise en forme de l'application.
+
+![navigation(captures/navigation.png)
 
 # Conclusion générale
 
