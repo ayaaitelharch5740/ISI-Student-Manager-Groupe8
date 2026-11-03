@@ -4,7 +4,7 @@
 **Département :** Informatique\
 **Module :** Méthodologies de développement et Ateliers en PHP\
 **Niveau :** Master ISI -- S1\
-**Professeur :** Prof. Ikidid Abdelouafi
+**Professeur :** Prof. Ikidid Abdelouafi\
 **Groupe :** 8
 
 ------------------------------------------------------------------------
