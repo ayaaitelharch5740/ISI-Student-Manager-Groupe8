@@ -5,6 +5,7 @@
 **Module :** Méthodologies de développement et Ateliers en PHP\
 **Niveau :** Master ISI -- S1\
 **Professeur :** Prof. Ikidid Abdelouafi
+**Groupe :** 8
 
 ------------------------------------------------------------------------
 
@@ -605,13 +606,15 @@ La commande `git status` permet de vérifier l'état du dépôt local.
 
 ### 3. Vérifier les fichiers du projet
 
-Les fichiers attendus sont :
+Les fichiers  sont :
 
 ``` text
 
 ISI-Student-Manager-GroupeXX/
 
 │
+
+├── captures/
 
 ├── README.md
 
@@ -666,7 +669,7 @@ Cette interface présente les projets disponibles dans l'application.
 
 Cette capture présente la navigation et la mise en forme de l'application.
 
-![navigation(captures/navigation.png)
+![navigation](captures/navigation.png)
 
 # Conclusion générale
 
