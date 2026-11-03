@@ -140,7 +140,7 @@ L'étudiant A se connecte à son compte GitHub :
 
 L'étudiant A crée un nouveau dépôt avec les paramètres suivants :
 
--   Repository name : `ISI-Student-Manager-Groupe9`
+-   Repository name : `ISI-Student-Manager-Groupe8`
 
 -   Visibility : Public
 
@@ -188,6 +188,16 @@ faciliter la collaboration entre les différents membres du groupe.
 
 ![Ex3.1.3](captures/Ex3.1.3.png)
 
+               Etudiant B :
+               
+![Ex3.2.1](captures/Ex3.2.1.jpeg)
+
+![Ex3.2.2](captures/Ex3.2.2.jpeg)
+
+![Ex3.2.3](captures/Ex3.2.3.jpeg)
+
+![Ex3.2.4](captures/Ex3.2.4.jpeg)
+
                Etudiant D :
 
 ![Ex3.4.1](captures/Ex3.4.1.png)
@@ -203,6 +213,14 @@ faciliter la collaboration entre les différents membres du groupe.
                 Etudiant A :
 
 ![Ex3.Q2.1](captures/Ex3.Q2.1.png)
+
+               Etudiant B :
+               
+![Ex3.Q2.2.1](captures/Ex3.Q2.2.1.jpeg)
+
+![Ex3.Q2.2.2](captures/Ex3.Q2.2.2.jpeg)
+
+![Ex3.Q2.2.3](capturesEx3.Q2.2.3.jpeg)
 
                 Etudiant D :
 
@@ -252,7 +270,11 @@ L'étudiant A crée le fichier `index.php` :
 
 Les autres étudiants récupèrent la version initiale :
 
-                Etudiant A :
+               Etudiant B :
+               
+![Ex4.2.1](captures/Ex4.2.1.jpeg)
+
+                Etudiant D :
 
 ![Ex4.4.1](captures/Ex4.4.1.png)
 
@@ -283,6 +305,10 @@ Chaque étudiant crée sa branche à partir d'une branche `main` à jour.
 
 ![Ex5.1.2](captures/Ex5.1.2.png)
 
+               Etudiant B :
+               
+![Ex5.2.1](captures/Ex5.2.1.jpeg)
+
                   Etudiant D :
 
 ![Ex5.4.1](captures/Ex5.4.1.png)
@@ -300,6 +326,10 @@ la branche active.
 ## Exercice 6 --- Développement en parallèle
 
 Chaque étudiant développe sa fonctionnalité sur sa propre branche.
+
+               Etudiant B :
+               
+![Ex6.2.1](captures/Ex6.2.1.jpeg)
 
                   Etudiant D :
 
@@ -336,6 +366,15 @@ Les Pull Requests sont :
                   Etudiant A :
 
 ![Ex7.1.1](captures/Ex7.1.1.png)
+
+
+               Etudiant B :
+               
+![Ex7.2.1](captures/Ex7.2.1.jpeg)
+
+![Ex7.2.2](captures/Ex7.2.2.jpeg)
+
+![Ex7.2.3](captures/Ex7.2.3.jpeg)
 
                   Etudiant D :
 
@@ -425,16 +464,11 @@ par :
 Version : 2.0 - Etudiant B
 ```
 
+![Ex8.2.2](captures/Ex8.2.2.jpeg)
+
 Puis il exécute :
 
-``` bash
-
-git add configuration.txt
-
-git commit -m "Modification de version par B"
-
-git push -u origin feature/version-b
-```
+![Ex8.2.3](captures/Ex8.2.3.jpeg)
 
 ### 4. Modification par C
 
