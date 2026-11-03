@@ -590,7 +590,7 @@ La commande `git status` permet de vérifier l'état du dépôt local.
 
 Les fichiers  sont :
 
-![fichiers(captures/fichiers.png)
+![fichiers](captures/fichiers.png)
 
 ### Livrables demandés
 
