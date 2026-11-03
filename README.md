@@ -76,15 +76,15 @@ de projets, avec une page d'accueil et une mise en forme CSS.
 | ---------- \| -------------------------------- \| ------------- \|
   ----------------- \|
 
-| Étudiant A \| Chef de projet et page d'accueil \| index.php \|
+| Étudiant A: AIT EL HARCH Aya\| Chef de projet et page d'accueil \| index.php \|
   feature/accueil \|
 
-| Étudiant B \| Liste des étudiants \| etudiants.php \|
+| Étudiant B: LAHMAMA Chaymae \| Liste des étudiants \| etudiants.php \|
   feature/etudiants \|
 
-| Étudiant C \| Liste des projets \| projets.php \| feature/projets \|
+| Étudiant C: RAFIQ Wissam    \| Liste des projets \| projets.php \| feature/projets \|
 
-| Étudiant EL BARKI Razan \| CSS et navigation \| style.css \|
+| Étudiant D: EL BARKI Razan  \| CSS et navigation \| style.css \|
   feature/style \|
 
 ------------------------------------------------------------------------
