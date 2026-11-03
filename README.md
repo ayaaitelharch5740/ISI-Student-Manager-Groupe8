@@ -72,23 +72,12 @@ de projets, avec une page d'accueil et une mise en forme CSS.
 
 ### Organisation du groupe
 
-| Membre \| Responsabilité \| Fichier \| Branche \|
-
-| ---------- \| -------------------------------- \| ------------- \|
-  ----------------- \|
-
-| Étudiant A: AIT EL HARCH Aya\| Chef de projet et page d'accueil \| index.php \|
-  feature/accueil \|
-
-| Étudiant B: LAHMAMA Chaymae \| Liste des étudiants \| etudiants.php \|
-  feature/etudiants \|
-
-| Étudiant C: RAFIQ Wissam    \| Liste des projets \| projets.php \| feature/projets \|
-
-| Étudiant D: EL BARKI Razan  \| CSS et navigation \| style.css \|
-  feature/style \|
-
-------------------------------------------------------------------------
+| Membre | Responsabilité | Fichier | Branche |
+|---|---|---|---|
+| **Étudiant A : AIT EL HARCH Aya** | Chef de projet et page d'accueil | `index.php` | `feature/accueil` |
+| **Étudiant B : LAHMAMA Chaymae** | Liste des étudiants | `etudiants.php` | `feature/etudiants` |
+| **Étudiant C : RAFIQ Wissam** | Liste des projets | `projets.php` | `feature/projets` |
+| **Étudiant D : EL BARKI Razan** | CSS et navigation | `style.css` | `feature/style` |
 
 # PARTIE A --- Réalisation du TP
 
