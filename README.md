@@ -220,7 +220,7 @@ faciliter la collaboration entre les différents membres du groupe.
 
 ![Ex3.Q2.2.2](captures/Ex3.Q2.2.2.jpeg)
 
-![Ex3.Q2.2.3](capturesEx3.Q2.2.3.jpeg)
+![Ex3.Q2.2.3.](capturesEx3.Q2.2.3..jpeg)
 
                 Etudiant D :
 
