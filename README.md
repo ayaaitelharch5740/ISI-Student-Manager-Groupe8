@@ -640,6 +640,34 @@ et les étapes de réalisation du TP.
 
 ------------------------------------------------------------------------
 
+# Présentation de l'application ISI Student Manager
+
+Cette partie présente les différentes interfaces de notre application web développée en PHP et CSS.
+
+## 1. Page d'accueil
+
+La page d'accueil présente l'application et permet d'accéder aux différentes fonctionnalités.
+
+![Page d'accueil](captures/application/accueil.png)
+
+## 2. Gestion des étudiants
+
+Cette interface permet d'afficher la liste des étudiants enregistrés.
+
+![Liste des étudiants](captures/application/liste-etudiants.png)
+
+## 3. Gestion des projets
+
+Cette interface présente les projets disponibles dans l'application.
+
+![Liste des projets](captures/application/liste-projets.png)
+
+## 4. Navigation et mise en forme
+
+Cette capture présente la navigation et la mise en forme de l'application.
+
+![Navigation](captures/application/navigation.png)
+
 # Conclusion générale
 
 Ce TP nous a permis de découvrir et de pratiquer la gestion
