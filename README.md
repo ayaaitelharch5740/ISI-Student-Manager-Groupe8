@@ -274,7 +274,6 @@ Les autres étudiants récupèrent la version initiale :
 
 ![Ex4.4.2](captures/Ex4.4.2.png)
 
-**Quelle est la différence entre commit et push ?**
 
 -   `git commit` permet d'enregistrer les modifications dans
     l'historique du dépôt local.
@@ -285,7 +284,6 @@ Les autres étudiants récupèrent la version initiale :
 Ainsi, un commit est un enregistrement local, tandis qu'un push permet
 de partager cet enregistrement avec les autres membres du groupe.
 
-pôt par les autres membres.
 
 ------------------------------------------------------------------------
 
@@ -293,7 +291,7 @@ pôt par les autres membres.
 
 Chaque étudiant crée sa branche à partir d'une branche `main` à jour.
 
-                  Etudiant A :
+               Etudiant A :
 
 ![Ex5.1.1](captures/Ex5.1.1.png)
 
@@ -306,7 +304,7 @@ Chaque étudiant crée sa branche à partir d'une branche `main` à jour.
                Etudiant C :
 ![Ex5.3.1](captures/Ex5.3.1.png)
 
-                  Etudiant D :
+               Etudiant D :
 
 ![Ex5.4.1](captures/Ex5.4.1.png)
 
@@ -332,7 +330,7 @@ Chaque étudiant développe sa fonctionnalité sur sa propre branche.
 ![Ex6.3.1](captures/Ex6.3.1.png)
 ![Ex6.3.2](captures/Ex6.3.2.png)
 
-                  Etudiant D :
+               Etudiant D :
 
 ![Ex6.4.1](captures/Ex6.4.1.png)
 
@@ -358,7 +356,8 @@ Les Pull Requests sont :
 | B | `feature/etudiants` | `main` |
 | C | `feature/projets` | `main` |
 | D | `feature/style` | `main` |
-                  Etudiant A :
+
+               Etudiant A :
 
 ![Ex7.1.1](captures/Ex7.1.1.png)
 
@@ -371,7 +370,7 @@ Les Pull Requests sont :
 
 ![Ex7.2.3](captures/Ex7.2.3.jpeg)
 
-                  Etudiant D :
+               Etudiant D :
 
 ![Ex7.4.1](captures/Ex7.4.1.png)
 
@@ -538,14 +537,8 @@ Git affiche des marqueurs de conflit  :
 
 B supprime les marqueurs et choisit la version commune demandée :
 
-``` text
+[conflit](captures/conflit.png)
 
-Nom du projet : ISI Student Manager
-
-Version : 3.0 - Version collaborative
-
-Responsable : Groupe ISI
-```
 
 ### 8. Finalisation de la résolution
 
@@ -578,31 +571,18 @@ Après revue et validation, la Pull Request est fusionnée.
 
 Nous exécutons :
 
-``` bash
-
-git log --oneline --graph --all --decorate
-```
+![Ex9.1](captures/Ex9.1.jpeg)
 
 Cette commande affiche l'historique des commits sous forme graphique,
 avec les différentes branches et les fusions.
 
 Pour afficher les branches :
 
-``` bash
-
-git branch -a
-```
+![Ex9.2](captures/Ex9.2.png)
 
 ### 2. Vérifier que main est à jour
 
-``` bash
-
-git switch main
-
-git pull origin main
-
-git status
-```
+![Ex9.3](captures/Ex9.3.png)
 
 La commande `git status` permet de vérifier l'état du dépôt local.
 
@@ -610,26 +590,7 @@ La commande `git status` permet de vérifier l'état du dépôt local.
 
 Les fichiers  sont :
 
-``` text
-
-ISI-Student-Manager-GroupeXX/
-
-│
-
-├── captures/
-
-├── README.md
-
-├── index.php
-
-├── etudiants.php
-
-├── projets.php
-
-├── style.css
-
-└── configuration.txt
-```
+![fichiers(captures/fichiers.png)
 
 ### Livrables demandés
 
