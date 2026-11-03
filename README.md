@@ -666,14 +666,3 @@ GitHub.**
 
 ------------------------------------------------------------------------
 
-## Vérifications avant le dépôt final
-
--   Vérifier que chaque image référencée existe bien dans `captures/` et
-    que son nom respecte exactement les majuscules, minuscules et
-    extensions.
--   Remplacer `[Insérer ici le lien réel du dépôt GitHub]` par l'URL
-    réelle du dépôt.
--   Compléter les éventuelles captures et réponses manquantes, notamment
-    pour l'exercice 9.
--   Vérifier que les commandes et les captures correspondent aux
-    manipulations réellement effectuées par le groupe.
