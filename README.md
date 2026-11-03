@@ -199,6 +199,10 @@ faciliter la collaboration entre les différents membres du groupe.
 
 ![Ex3.2.4](captures/Ex3.2.4.jpeg)
 
+               Etudiant C :
+               
+![Ex3.3.1](captures/Ex3.3.1.png)
+
                Etudiant D :
 
 ![Ex3.4.1](captures/Ex3.4.1.png)
@@ -310,6 +314,9 @@ Chaque étudiant crée sa branche à partir d'une branche `main` à jour.
                
 ![Ex5.2.1](captures/Ex5.2.1.jpeg)
 
+               Etudiant C :
+![Ex5.3.1](captures/Ex5.3.1.png)
+
                   Etudiant D :
 
 ![Ex5.4.1](captures/Ex5.4.1.png)
@@ -331,6 +338,10 @@ Chaque étudiant développe sa fonctionnalité sur sa propre branche.
                Etudiant B :
                
 ![Ex6.2.1](captures/Ex6.2.1.jpeg)
+
+               Etudiant C :
+![Ex6.3.1](captures/Ex6.3.1.png)
+![Ex6.3.2](captures/Ex6.3.2.png)
 
                   Etudiant D :
 
@@ -423,6 +434,14 @@ validation collective avant l'intégration.
 
 ![Ex8.1.3](captures/Ex8.1.3.png)
 
+                  Etudiant C :
+                  
+![Ex8.3.1](captures/Ex8.3.1.png)
+
+![Ex8.3.2](captures/Ex8.3.2.png)
+
+![Ex8.3.3](captures/Ex8.3.3.png)
+                  
 ### 2. Création des branches B et C
 
 Les étudiants B et C récupèrent le même état initial de `main`.
